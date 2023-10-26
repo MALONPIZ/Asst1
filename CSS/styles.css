@@ -1,7 +1,74 @@
 html {
     font-size: 62.5%;
+    background-color: #EEEEEE;
 }
 
-.content {
+/* 顶部导航栏start */
+header .wrap {
+    display: flex;
+    background-color: #FEC0A7;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.wrap .top-bar-left {
+    margin-left: 15rem;
+}
+
+.wrap .top-bar-right {
+    display: flex;
+    margin-right: 5rem;
+}
+
+.wrap .top-bar-right ul {
     display: flex;
 }
+
+.wrap .top-bar-right a {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    color: #797979;
+}
+
+.wrap .top-bar-right .separator {
+    color: #797979;
+    font-size: 1.5rem;
+}
+
+.wrap .top-bar-right li {
+    position: relative;
+}
+
+.wrap .top-bar-left img {
+    width: 4rem;
+}
+
+.contact-us {
+    width: 12rem;
+    height: 12rem;
+    background-color: #fff;
+    box-shadow: 0 .1rem .5rem #aaa;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+}
+.contact-us img{
+    width:10rem
+}
+.contact-us p{
+    font-size: 1rem;
+}
+.cart-list{
+    position: absolute;
+}
+/* 顶部导航栏end */
+
+/* 搜索框start */
+
+/* 搜索框end */
