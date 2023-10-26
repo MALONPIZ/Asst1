@@ -1,0 +1,161 @@
+body,
+h1,
+h2,
+p,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+
+}
+
+.product {
+    background-color: #c0c0c0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+    /* 添加圆角矩形 */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* 添加圆角矩形 */
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    /* 添加圆角矩形 */
+}
+
+.product button:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #c0c0c0;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 登录表单样式 */
+#login-form {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"],
+#login-form button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+
+}
+
+#login-form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #0056b3;
+}
+
+/* 产品搜索样式 */
+#search-input {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 800px;
+}
+
+#search-button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+/* CSS样式 */
+@keyframes titleAnimation {
+    0% {
+        color: #007bff; /* 起始颜色 */
+    }
+    50% {
+        color: #ff6347; /* 中间颜色 */
+    }
+    100% {
+        color: #007bff; /* 结束颜色，可以与起始颜色相同以实现循环 */
+    }
+}
+
+h1 {
+    animation: titleAnimation 3s linear infinite; /* 应用动画，3秒的持续时间，线性运动，无限循环 */
+}
+/* 定义抖动动画 */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-2px) rotate(1deg); }
+    40% { transform: translateX(2px) rotate(-1deg); }
+    60% { transform: translateX(-2px) rotate(2deg); }
+    80% { transform: translateX(2px) rotate(-2deg); }
+    100% { transform: translateX(0); }
+}
+
+/* 应用抖动动画到标题 */
+h1 {
+    animation: shake 0.3s ease-in-out infinite; /* 应用抖动动画 */
+}
