@@ -107,7 +107,7 @@ html {
     display: flex;
     align-items: center;
     height: 4rem;
-    margin-right: 6rem;
+    margin-right: 5rem;
     background-color: #424242;
 }
 
@@ -122,7 +122,9 @@ html {
 .cart:hover>.cart-list {
     display: flex;
 }
-
+#contact-us{
+    margin-right: 18rem;
+}
 /* 顶部导航栏end */
 
 /* 搜索框start */
@@ -130,7 +132,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
+    height: 8rem;
     width: 100vw;
     background-color: #fff;
 }
