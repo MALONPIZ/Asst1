@@ -4,6 +4,9 @@
  * @Last Modified by:   Your name
  * @Last Modified time: 2023-11-07 08:55:35
  */
+
+
+
 html::-webkit-scrollbar {
     width: 3px;
     height: 5px;
@@ -32,13 +35,9 @@ html::-webkit-scrollbar-thumb {
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Segoe-UI';
-    src: url('../font/Segoe-UI.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+
+
+
 
 body {
     margin: 0%;
@@ -65,6 +64,7 @@ body {
     --background: #080C13;
     --background-2: var(--gray-2);
     --background-3: var(--gray-3);
+
     --primary: var(--white-1);
     --secondary: var(--white-2);
     --gray: var(--gray-M);
@@ -101,7 +101,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1000;
     background: none;
-    border-bottom: 1px solid --primary;
+    border-bottom: 1px solid var(--primary);
 }
 
 .theme-toggle svg {
@@ -392,7 +392,62 @@ a {
 
 
 .placeholder {
-    height: 100vh;
+    height: 10vh;
 }
 
+/* banner start */
+.banner {
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-01 {
+    height: 75vh;
+    width: 100vw;
+    position: relative;
+}
+
+.banner-01 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+
+
+.banner-01 .content-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.content-holder h2 {
+    padding: 12px 0;
+    font-size: 3.5rem;
+    z-index: 3;
+}
+
+.banner-01 .content-holder h3 {
+    z-index: 3;
+}
+
+.banner-01::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(8, 12, 19, 1), rgba(8, 12, 19, 0));
+    z-index: 2;
+}
+
+/* banner end */
 
