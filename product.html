@@ -1,0 +1,114 @@
+<!-- 
+  @Author: Your name
+  @Date:   2023-10-31 19:18:39
+  @Last Modified by:   Your name
+  @Last Modified time: 2023-11-07 16:18:06
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WE, IN OUR BELIEF, STAND HERE.</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" width="45" height="45" href="img/millennium_logo.ico">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="dark">
+    <div class="navbar" style="border-bottom: 1px solid var(--primary);">
+        <div>
+            <a aria-label="Homepage" href="/index" class="logo" style="display: flex;">
+                <img id="headerLogo" src="img/millennium_logo_white.svg" alt="Homepage" width="40" height="26">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a aria-label="About Page" href="/about" class="navbar-link"><div class="button"><span>About</span></div></a>
+            <a aria-label="Cart Page" href="/cart" class="navbar-link"><div class="button"><span>Cart</span></div></a>
+            <a aria-label="Products Page" href="/products" class="navbar-link" style="font-weight: 700;"><div class="button"><span>Products</span></div></a>
+            <a aria-label="Login Page" href="/notes" class="navbar-link"><div class="button"><span>Login</span></div></a>
+            <a aria-label="Register Page" href="/register" class="navbar-link"><div class="button"><span>Register</span></div></a>
+        </nav>
+        <div class="logo" id="user-nav">
+            <a href="javascript:void(0);" onclick="openUser()" style="display: flex;">
+                <img id="user-icon" src="img/user_white.svg" alt="user" width="26" height="26" style="transition: .5s all;">                              
+            </a>
+        </div>
+        
+        <div class="mobile-nav" id="mobile-nav">
+            <a class="logo" href="javascript:void(0);" onclick="openMenu()" style="display: flex;">   
+                <img id="menu-icon" src="img/menu_white.svg" alt="" style="transition: .5s all;">                   
+            </a>
+        </div>
+    </div>
+    <div class="theme-toggle" id="theme-toggle">
+        <svg width="45" height="45" viewBox="0 0 16 16">
+            <g transform="rotate(180, 8, 8)">
+                <path d="M6.7 16l9.3-9.3v-1.4l-10.7 10.7z"></path>
+                <path d="M9.7 16l6.3-6.3v-1.4l-7.7 7.7z"></path>
+                <path d="M12.7 16l3.3-3.3v-1.4l-4.7 4.7z"></path>
+                <path d="M15.7 16l0.3-0.3v-1.4l-1.7 1.7z"></path>
+                <path id="visible-button" fill="transparent" d="M16 16h-11l16-16z"></path>
+            </g>
+        </svg>
+    </div>
+    <div id="scrollToTopButton" class="scrollToTopButton">
+        <svg width="10vw" height="10vh" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,400C0,179.1,179.1,0,400,0s400,179.1,400,400S620.9,800,400,800S0,620.9,0,400z M171.4,342.8v171.4l171.4-171.4v342.9h114.3V342.8l171.4,171.4V342.8L400,114.2L171.4,342.8z">
+            </path>
+        </svg>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <a aria-label="About Page" href="/about" class="navbar-link"><div class="button"><span>About</span></div></a>
+        <a aria-label="Cart Page" href="/cart" class="navbar-link"><div class="button"><span>Cart</span></div></a>
+        <a aria-label="Products Page" href="/products" class="navbar-link" style="font-weight: 700;"><div class="button"><span>Products</span></div></a>
+        <a aria-label="Login Page" href="/login" class="navbar-link"><div class="button"><span>Login</span></div></a>
+        <a aria-label="Register Page" href="/rergister" class="navbar-link"><div class="button"><span>Register</span></div></a>
+    </div>
+    <div class="user-popup" id="user-popup">
+        <a href="/account-settings" class="navbar-link"><div class="button"><span>Account Settings</span></div></a>
+        <a href="/favorites" class="navbar-link"><div class="button"><span>Favorites</span></div></a>
+        <a href="/order-history" class="navbar-link"><div class="button"><span>Order History</span></div></a>
+        <a href="/notifications" class="navbar-link"><div class="button"><span>Notifications</span></div></a>
+        <a href="/logout" class="navbar-link"><div class="button"><span>Log Out</span></div></a>
+    </div>
+    <div class="guest-popup" id="guest-popup">
+        <a aria-label="Login Page" href="/notes" class="navbar-link"><div class="button"><span>Login first</span></div></a>
+    </div>
+    <div class="menu-bg"></div>
+    
+    <main>
+        <div class="placeholder">
+            <!-- 这是占位块 -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div style="grid-area: info;" class="footer-info">
+            <div class="info-upper" style="display: flex;">
+                <img id="Milennium" src="img/Milennium_white.svg" alt="Homepage" width="376" height="57">
+                <span class="footer-about"><br><br>We are committed to providing computer hardware products of the highest caliber.</span>    
+            </div>
+        </div>
+        <div>
+            <h3>Pages</h3>
+            <nav class="footer-link-list">
+                <a href="/index" class="navbar-link">Home</a>
+                <a href="/about" class="navbar-link">About</a>
+                <a href="/cart" class="navbar-link">Cart</a>
+                <a href="/products" class="navbar-link" style="font-weight: 700;">Products</a>
+                <a href="/login" class="navbar-link">Login</a>
+                <a href="/register" class="navbar-link">Register</a>
+            </nav>
+        </div>
+        <nav>
+            <h3>Powered by</h3>
+            <nav class="footer-link-list">
+                <a href="个人主页" class="navbar-link">Richard He</a>
+                <a href="个人主页" class="navbar-link">Jim Zhou</a>
+                <a href="个人主页" class="navbar-link">Bill Chen</a>
+                <a href="个人主页" class="navbar-link">Jordan Lu</a>
+            </nav>
+        </nav>
+        <div style="grid-area: legal;" class="footer-legal">©MILLENNIUM 2023. Built on 2023-11-07 14:53:22</div>
+    </footer>
+</body>
+</html>
