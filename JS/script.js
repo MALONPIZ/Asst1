@@ -236,6 +236,7 @@ visibleButton.addEventListener("mouseenter", () => {
                 menuicon.src = "img/close_black.svg";
             }
             Milennium.src = "img/Milennium_black.svg"; // 更新 Milennium 图标
+            
         } else if (body.classList.contains("light")) { // 如果当前主题是 light
             // 切换主题到 dark
             body.classList.remove("light");
