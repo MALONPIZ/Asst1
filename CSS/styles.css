@@ -47,6 +47,7 @@ body {
     transition: 0.3s all;
     animation: fadeIn ease 1s;
     overflow-x: hidden;
+    user-select: none;
 }
 
 :root {
@@ -64,14 +65,16 @@ body {
     --background: #080C13;
     --background-2: var(--gray-2);
     --background-3: var(--gray-3);
-
     --primary: var(--white-1);
     --secondary: var(--white-2);
     --gray: var(--gray-M);
     --scrolling-Marker: rgba(138, 138, 138, 0.5);
+    --card-bacckground: rgba(30, 30, 30, 1);
+    --card-bacckground-after: rgba(30, 30, 30, 0.7);
     --response-bg: rgba(38, 35, 56, 0.8);
     --nav: rgba(255, 255, 255, 1);
     --nav0: rgba(255, 255, 255, 0);
+    --menu-bg: 180deg, rgba(27, 27, 84, 1) 0%, rgba(27, 27, 84, 0) 100%;
     --banner: rgba(8, 12, 19, 1);
     --banner0: rgba(8, 12, 19, 0);
 }
@@ -84,10 +87,12 @@ body {
     --secondary: var(--gray-2);
     --gray: var(--gray-M);
     --scrolling-Marker: rgba(80, 80, 80, 0.5);
+    --card-bacckground: rgba(160, 160, 160, 1);
+    --card-bacckground-after: rgba(160, 160, 160, 0.7);
     --response-bg: rgba(130, 119, 193, 0.8);
     --nav: rgba(0, 0, 0, 1);
     --nav0: rgba(0, 0, 0, 0);
-
+    --menu-bg: 180deg, rgba(64, 64, 199, 1) 0%, rgba(64, 64, 199, 0) 100%;
 }
 
 .navbar {
@@ -105,6 +110,7 @@ body {
     z-index: 1000;
     background: none;
     border-bottom: 1px solid var(--primary);
+    pointer-events: none;
 }
 
 .theme-toggle svg {
@@ -129,11 +135,13 @@ body {
 
 .logo img {
     transition: 0.3s filter;
+    pointer-events: auto;
 }
 
 .logo img:hover {
     filter: drop-shadow(0px 0px 6px var(--nav));
     transition: 0.3s filter;
+    pointer-events: auto;
 }
 
 .main-nav {
@@ -149,11 +157,13 @@ body {
     transition: 0.3s color;
     text-decoration: none;
     transition: 0.3s font-weight;
+    pointer-events: auto;
 }
 
 .navbar-link:hover {
     transition: 0.3s filter;
     filter: drop-shadow(0px 0px 6px var(--nav));
+    pointer-events: auto;
 }
 
 .navbar-link:active {
@@ -161,11 +171,13 @@ body {
     font-weight: 200;
     transition: 0.3s color;
     transition: 0.3s font-weight;
+    pointer-events: auto;
 }
 
 .navbar-link:hover {
     font-weight: 700;
     transition: 0.2s font-weight;
+    pointer-events: auto;
 }
 
 
@@ -246,7 +258,8 @@ body {
     width: 100vw;
     height: 170px;
     position: fixed;
-    background: linear-gradient(180deg, #1B1B54 0%, rgba(27, 27, 84, 0.00) 100%);
+    background: linear-gradient(var(--menu-bg));
+    pointer-events: none;
 }
 
 @media only screen and (orientation: portrait) {
@@ -408,10 +421,10 @@ a {
 }
 
 .main {
-    height: 75vh;
+    height: 80vh;
     width: 100vw;
     position: relative;
-    margin-bottom: 0.5vh;
+    margin-bottom: 1vh;
 
 }
 
@@ -432,19 +445,26 @@ a {
 .main .content-holder {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     color: #fff;
 }
 
 .content-holder h2 {
     padding-top: 12px;
-    font-size: 3.5rem;
+    font-size: 5vw;
+    font-family: 'Segoe UI';
     z-index: 3;
     margin-bottom: 0;
+    user-select: none
 }
 
 .main .content-holder h3 {
     z-index: 3;
+    letter-spacing: 20px;
+    margin-left: 20px;
+    font-size: 1.5vw;
+    user-select: none
 }
 
 .main::before {
@@ -458,17 +478,24 @@ a {
     z-index: 2;
 }
 
+.secondary-banner {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
 .secondary {
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
     height: 75vh;
     width: 100vw;
     margin: 0.5%;
     padding: 0;
 }
 
-.secondary img:hover {
+.secondary img:hover,
+.secondary .right:hover,
+.secondary .left:hover {
     transform: translateY(-2px);
 }
 
@@ -476,12 +503,9 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.2s linear;
-}
-
-
-.secondary .left:hover {
-    transform: translateY(-2px);
+    transition: all 0.2s ease-out;
+    position: absolute;
+    z-index: 2;
 }
 
 .secondary .left {
@@ -491,16 +515,40 @@ a {
     transition: all 0.2s linear;
 }
 
-
-
-.secondary .right:hover {
-    transform: translateY(-2px);
-    }
 .secondary .right {
     width: 49.5%;
     overflow: hidden;
     position: relative;
     transition: all 0.2s linear;
+}
+
+.secondary .content-holder {
+    display: flex;
+
+    color: #fff;
+}
+
+
+.secondary h3 {
+    display: inline;
+    margin-bottom: 0;
+    z-index: 3;
+    font-size: 4vw;
+    font-family: 'Segoe UI';
+    font-weight: light;
+    margin-left: 3vw;
+    transition: all 0.2s ease-out;
+    user-select: none;
+
+}
+
+.secondary h3:hover {
+    transform: translateY(-8px);
+
+}
+
+.banner .popup-box{
+
 }
 
 /* banner end */
