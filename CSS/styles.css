@@ -547,8 +547,38 @@ a {
 
 }
 
-.banner .popup-box{
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+}
 
+.search-bar .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 32vw;
+    height: 5vh;
+    border: .1rem solid var(--secondary);
+    box-sizing: border-box;
+    padding: 0 .5rem;
+    outline: none;
+    margin-right: 1rem;
+    /* border-radius: 2.5rem; */
+    background-color: var(--background);
+}
+
+.search-bar button {
+    width: 5vw;
+    height: 5vh;
+    border: .1rem solid var(--primary);
+    /* border-radius: 2.5rem; */
+    background-color: var(--primary)
 }
 
 /* banner end */
