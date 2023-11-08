@@ -22,75 +22,75 @@ function openUser() {
     let y = document.getElementById("user-icon");
 
     if (isUserLoggedIn) { // 用户已登录，执行用户菜单切换逻辑
-            if (!isUserMenuOpen) { //当用户菜单未打开时
-                x.className += " responsive-user";
-                //y.src = "img/close.svg";
-                if (body.classList.contains("dark")) {
-                    y.src = "img/close_white.svg";
-                } else if (body.classList.contains("light")) {
-                    y.src = "img/close_black.svg";
-                }
-                isUserMenuOpen = true;
+        if (!isUserMenuOpen) { //当用户菜单未打开时
+            x.className += " responsive-user";
+            //y.src = "img/close.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/close_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/close_black.svg";
+            }
+            isUserMenuOpen = true;
 
-                // 关闭移动菜单（如果已打开）
-                if (isMobileMenuOpen) {
-                    let mobileMenu = document.getElementById("mobile-menu");
-                    let mobileMenuIcon = document.getElementById("menu-icon");
-                    mobileMenu.className = "mobile-menu";
-                    //mobileMenuIcon.src = "img/menu_white.svg";
-                    if (body.classList.contains("dark")) {
-                        mobileMenuIcon.src = "img/menu_white.svg";
-                    } else if (body.classList.contains("light")) {
-                        mobileMenuIcon.src = "img/menu_black.svg";
-                    }
-                    isMobileMenuOpen = false;
-                }
-            } else { //如果用户菜单已经打开
-                x.className = "user-popup";
-                //y.src = "img/user_white.svg";
+            // 关闭移动菜单（如果已打开）
+            if (isMobileMenuOpen) {
+                let mobileMenu = document.getElementById("mobile-menu");
+                let mobileMenuIcon = document.getElementById("menu-icon");
+                mobileMenu.className = "mobile-menu";
+                //mobileMenuIcon.src = "img/menu_white.svg";
                 if (body.classList.contains("dark")) {
-                    y.src = "img/user_white.svg";
+                    mobileMenuIcon.src = "img/menu_white.svg";
                 } else if (body.classList.contains("light")) {
-                    y.src = "img/user_black.svg";
+                    mobileMenuIcon.src = "img/menu_black.svg";
                 }
-                isUserMenuOpen = false;
+                isMobileMenuOpen = false;
             }
-        } else { // 用户未登录，执行用访客菜单切换逻辑
-            let x = document.getElementById("guest-popup");
-            if (!isUserMenuOpen) { //当用户菜单未打开时
-                x.className += " responsive-user";
-                //y.src = "img/close.svg";
-                if (body.classList.contains("dark")) {
-                    y.src = "img/close_white.svg";
-                } else if (body.classList.contains("light")) {
-                    y.src = "img/close_black.svg";
-                }
-                isUserMenuOpen = true;
-                
-                // 关闭移动菜单（如果已打开）
-                if (isMobileMenuOpen) {
-                    let mobileMenu = document.getElementById("mobile-menu");
-                    let mobileMenuIcon = document.getElementById("menu-icon");
-                    mobileMenu.className = "mobile-menu";
-                    //mobileMenuIcon.src = "img/menu_white.svg";
-                    if (body.classList.contains("dark")) {
-                        mobileMenuIcon.src = "img/menu_white.svg";
-                    } else if (body.classList.contains("light")) {
-                        mobileMenuIcon.src = "img/menu_black.svg";
-                    }
-                    isMobileMenuOpen = false;
-                }
-            } else { //如果用户菜单已经打开
-                x.className = "guest-popup";
-                //y.src = "img/user_white.svg";
-                if (body.classList.contains("dark")) {
-                    y.src = "img/user_white.svg";
-                } else if (body.classList.contains("light")) {
-                    y.src = "img/user_black.svg";
-                }
-                isUserMenuOpen = false;
+        } else { //如果用户菜单已经打开
+            x.className = "user-popup";
+            //y.src = "img/user_white.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/user_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/user_black.svg";
             }
+            isUserMenuOpen = false;
         }
+    } else { // 用户未登录，执行用访客菜单切换逻辑
+        let x = document.getElementById("guest-popup");
+        if (!isUserMenuOpen) { //当用户菜单未打开时
+            x.className += " responsive-user";
+            //y.src = "img/close.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/close_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/close_black.svg";
+            }
+            isUserMenuOpen = true;
+
+            // 关闭移动菜单（如果已打开）
+            if (isMobileMenuOpen) {
+                let mobileMenu = document.getElementById("mobile-menu");
+                let mobileMenuIcon = document.getElementById("menu-icon");
+                mobileMenu.className = "mobile-menu";
+                //mobileMenuIcon.src = "img/menu_white.svg";
+                if (body.classList.contains("dark")) {
+                    mobileMenuIcon.src = "img/menu_white.svg";
+                } else if (body.classList.contains("light")) {
+                    mobileMenuIcon.src = "img/menu_black.svg";
+                }
+                isMobileMenuOpen = false;
+            }
+        } else { //如果用户菜单已经打开
+            x.className = "guest-popup";
+            //y.src = "img/user_white.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/user_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/user_black.svg";
+            }
+            isUserMenuOpen = false;
+        }
+    }
 }
 /**
  * 功能基本与openUser相同，但相应的文件名、类名有不同
@@ -98,76 +98,76 @@ function openUser() {
 function openMenu() {
     let x = document.getElementById("mobile-menu");
     let y = document.getElementById("menu-icon");
-    
-    if (isUserLoggedIn) { // 用户已登录，执行用户菜单切换逻辑
-            if (!isMobileMenuOpen) { //当移动菜单未打开时
-                x.className += " responsive";
-                //y.src = "img/close.svg";
-                if (body.classList.contains("dark")) {
-                    y.src = "img/close_white.svg";
-                } else if (body.classList.contains("light")) {
-                    y.src = "img/close_black.svg";
-                }
-                isMobileMenuOpen = true;
 
-                // 关闭用户菜单（如果已打开）
-                if (isUserMenuOpen) {
-                    let userMenu = document.getElementById("user-popup");
-                    let userIcon = document.getElementById("user-icon");
-                    userMenu.className = "user-popup";
-                    //userIcon.src = "img/user_white.svg";
-                    if (body.classList.contains("dark")) {
-                        userIcon.src = "img/user_white.svg";
-                    } else if (body.classList.contains("light")) {
-                        userIcon.src = "img/user_black.svg";
-                    }
-                    isUserMenuOpen = false;
-                }
-            } else { //如果移动菜单已经打开
-                x.className = "mobile-menu";
-                //y.src = "img/menu_white.svg";
-                if (body.classList.contains("dark")) {
-                    y.src = "img/menu_white.svg";
-                } else if (body.classList.contains("light")) {
-                    y.src = "img/menu_black.svg";
-                }
-                isMobileMenuOpen = false;
+    if (isUserLoggedIn) { // 用户已登录，执行用户菜单切换逻辑
+        if (!isMobileMenuOpen) { //当移动菜单未打开时
+            x.className += " responsive";
+            //y.src = "img/close.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/close_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/close_black.svg";
             }
-        } else { // 用户未登录，执行用访客菜单切换逻辑
-            if (!isMobileMenuOpen) { //当移动菜单未打开时
-                x.className += " responsive";
-                //y.src = "img/close.svg";
+            isMobileMenuOpen = true;
+
+            // 关闭用户菜单（如果已打开）
+            if (isUserMenuOpen) {
+                let userMenu = document.getElementById("user-popup");
+                let userIcon = document.getElementById("user-icon");
+                userMenu.className = "user-popup";
+                //userIcon.src = "img/user_white.svg";
                 if (body.classList.contains("dark")) {
-                    y.src = "img/close_white.svg";
+                    userIcon.src = "img/user_white.svg";
                 } else if (body.classList.contains("light")) {
-                    y.src = "img/close_black.svg";
+                    userIcon.src = "img/user_black.svg";
                 }
-                isMobileMenuOpen = true;
-                
-                // 关闭访客菜单（如果已打开）
-                if (isUserMenuOpen) {
-                    let userMenu = document.getElementById("guest-popup");
-                    let userMenuIcon = document.getElementById("user-icon");
-                    userMenu.className = "guest-popup";
-                    //userIcon.src = "img/user_white.svg";
-                    if (body.classList.contains("dark")) {
-                        userIcon.src = "img/user_white.svg";
-                    } else if (body.classList.contains("light")) {
-                        userIcon.src = "img/user_black.svg";
-                    }
-                    isUserMenuOpen = false;
-                }
-            } else { //如果用户菜单已经打开
-                x.className = "mobile-menu";
-                //y.src = "img/menu_white.svg";
-                if (body.classList.contains("dark")) {
-                    y.src = "img/menu_white.svg";
-                } else if (body.classList.contains("light")) {
-                    y.src = "img/menu_black.svg";
-                };
-                isMobileMenuOpen = false;
+                isUserMenuOpen = false;
             }
+        } else { //如果移动菜单已经打开
+            x.className = "mobile-menu";
+            //y.src = "img/menu_white.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/menu_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/menu_black.svg";
+            }
+            isMobileMenuOpen = false;
         }
+    } else { // 用户未登录，执行用访客菜单切换逻辑
+        if (!isMobileMenuOpen) { //当移动菜单未打开时
+            x.className += " responsive";
+            //y.src = "img/close.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/close_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/close_black.svg";
+            }
+            isMobileMenuOpen = true;
+
+            // 关闭访客菜单（如果已打开）
+            if (isUserMenuOpen) {
+                let userMenu = document.getElementById("guest-popup");
+                let userMenuIcon = document.getElementById("user-icon");
+                userMenu.className = "guest-popup";
+                //userIcon.src = "img/user_white.svg";
+                if (body.classList.contains("dark")) {
+                    userIcon.src = "img/user_white.svg";
+                } else if (body.classList.contains("light")) {
+                    userIcon.src = "img/user_black.svg";
+                }
+                isUserMenuOpen = false;
+            }
+        } else { //如果用户菜单已经打开
+            x.className = "mobile-menu";
+            //y.src = "img/menu_white.svg";
+            if (body.classList.contains("dark")) {
+                y.src = "img/menu_white.svg";
+            } else if (body.classList.contains("light")) {
+                y.src = "img/menu_black.svg";
+            };
+            isMobileMenuOpen = false;
+        }
+    }
 }
 
 
@@ -176,10 +176,10 @@ function openMenu() {
 /**
  * 监听页面滚动事件，根据滚动距离调整导航栏样式。
  */
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const menuBg = document.querySelector('.menu-bg');
     const navbar = document.querySelector('.navbar');
-    
+
     // 检查滚动距离是否大于20像素
     if (window.scrollY > 20) {
         // 如果滚动距离大于20像素，使菜单背景可见
@@ -236,7 +236,7 @@ visibleButton.addEventListener("mouseenter", () => {
                 menuicon.src = "img/close_black.svg";
             }
             Milennium.src = "img/Milennium_black.svg"; // 更新 Milennium 图标
-            
+
         } else if (body.classList.contains("light")) { // 如果当前主题是 light
             // 切换主题到 dark
             body.classList.remove("light");
@@ -358,31 +358,40 @@ visibleButton.addEventListener("mouseleave", () => {
 
 
 
-
 // 获取按钮元素
 const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+// 初始时禁用按钮
+scrollToTopButton.disabled = true;
 
 // 监听页面滚动事件
 window.addEventListener('scroll', () => {
     const scrollHeight = window.scrollY;
     const pageHeight = document.body.scrollHeight - window.innerHeight;
 
-    // 当页面滚动到后25%时显示按钮，否则隐藏
-    if (scrollHeight > pageHeight * 0.75) {
+    // 当页面滚动到25%时显示按钮，否则隐藏
+    if (scrollHeight > pageHeight * 0.25) {
         scrollToTopButton.classList.add("show");
+        // 启用按钮
+        scrollToTopButton.disabled = false;
     } else {
         scrollToTopButton.classList.remove("show");
+        // 禁用按钮
+        scrollToTopButton.disabled = true;
     }
 });
 
 // 监听按钮点击事件，滚动到页面顶部
 scrollToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (!scrollToTopButton.disabled) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 });
 
 
 // ----------------------index-------------------------
 
 
-// ----------------------index-------------------------
+
+//----------------------index-------------------------
 
