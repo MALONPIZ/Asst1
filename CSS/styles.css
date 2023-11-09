@@ -498,7 +498,7 @@ a {
     padding: 0;
 }
 
-.secondary img:hover,
+
 .secondary .right:hover,
 .secondary .left:hover {
     transform: translateY(-2px);
@@ -515,14 +515,14 @@ a {
 
 .secondary .left {
     width: 49.5%;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     transition: all 0.2s linear;
 }
 
 .secondary .right {
     width: 49.5%;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     transition: all 0.2s linear;
 }
@@ -633,7 +633,7 @@ a {
     /* height: 50vh; */
     /* background-color: rgba(255, 255, 255); */
     padding: 10px;
-    z-index: 5;
+    z-index: 50;
     transform: translateY(300%);
     transition: .6s ease-in-out;
     opacity: 0;
@@ -676,7 +676,7 @@ a {
 
 }
 
-.content-holder:hover .popup-box {
+.content-holder h3:hover +.popup-box {
     transform: translateY(200%);
     opacity: 1;
     transition-delay: 0.2s;
